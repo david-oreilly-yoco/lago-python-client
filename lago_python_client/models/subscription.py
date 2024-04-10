@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 from lago_python_client.base_model import BaseModel
-from .plan import PlanOverrides
+from .plan import PlanOverrides, PlanResponse
 from ..base_model import BaseResponseModel
 
 
@@ -34,6 +34,7 @@ class SubscriptionResponse(BaseResponseModel):
     previous_plan_code: Optional[str]
     next_plan_code: Optional[str]
     downgrade_plan_date: Optional[str]
+    plan: PlanResponse
 
 
 class SubscriptionsResponse(BaseResponseModel):
