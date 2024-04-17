@@ -2,8 +2,8 @@ from typing import Any, Dict, List, Optional
 
 from lago_python_client.base_model import BaseModel
 
-from .tax import TaxesResponse
 from ..base_model import BaseResponseModel
+from .tax import TaxesResponse
 
 
 class GroupProperties(BaseModel):
@@ -55,6 +55,7 @@ class ChargesResponse(BaseResponseModel):
 
 class ChargeOverrides(BaseModel):
     id: Optional[str]
+    billable_metric_id: Optional[str]
     invoice_display_name: Optional[str]
     min_amount_cents: Optional[int]
     properties: Optional[Dict[str, Any]]
